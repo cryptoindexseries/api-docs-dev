@@ -4540,7 +4540,7 @@
 					"console.log(signature,timestamp);",
 					"",
 					"pm.request.headers.add({key: 'X-API-KEY', value: apiKey });",
-					"pm.request.headers.add({key: 'X-API-TIMESTAMP', value: timestamp });",
+					"pm.request.headers.add({key: 'X-API-TIMESTAMP', value: timestamp.toString() });",
 					"pm.request.headers.add({key: 'X-API-SIGNATURE', value: signature });",
 					""
 				]
