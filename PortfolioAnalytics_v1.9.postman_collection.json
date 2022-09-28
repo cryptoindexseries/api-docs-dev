@@ -2043,6 +2043,125 @@
 									"response": []
 								}
 							]
+						},
+						{
+							"name": "ProviderSymbolHistory",
+							"item": [
+								{
+									"name": "HistoryIngest",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-TENANT-NAME",
+												"value": "{{X-TENANT-NAME}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"history\": [\r\n        {\r\n            \"ts\": 1664352307395,\r\n            \"provider_unique_identifier\": \"CIS\",\r\n            \"provider_unique_symbol\": \"ETH-USD.CISCALC\",\r\n            \"tick\": 1.1\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/v1/Tenant/ProviderSymbolHistory/HistoryIngest",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"v1",
+												"Tenant",
+												"ProviderSymbolHistory",
+												"HistoryIngest"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Search",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-TENANT-NAME",
+												"value": "{{X-TENANT-NAME}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"search_string\": \"\",\r\n    \"page_number\": 1,\r\n    \"page_size\": 50,\r\n    \"order_by_direction\": \"\",\r\n    \"order_by_field\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/v1/Tenant/ProviderSymbolHistory/Search",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"v1",
+												"Tenant",
+												"ProviderSymbolHistory",
+												"Search"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-TENANT-NAME",
+												"value": "{{X-TENANT-NAME}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"ts\":1656288000000,\r\n    \"provider_unique_identifier\":\"REF\",\r\n    \"provider_unique_symbol\":\"BTC=\",\r\n    \"open\":21038.08,\r\n    \"high\":21539.85,\r\n    \"low\":20510.0,\r\n    \"close\":20742.56\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/v1/Tenant/ProviderSymbolHistory/Update",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"v1",
+												"Tenant",
+												"ProviderSymbolHistory",
+												"Update"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					]
 				},
@@ -3656,7 +3775,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"user_unique_identifier\": \"c51313d3-5a17-4613-b4dd-b34ea5c278b1\",\r\n    \"claim_name\":\"PROVIDER_SYMBOL_PROVIDER_ASSET_SPOTS_READ\"\r\n}",
+											"raw": "{\r\n    \"user_unique_identifier\": \"c51313d3-5a17-4613-b4dd-b34ea5c278b1\",\r\n    \"claim_name\":\"PROVIDER_SYMBOL_HISTORY_READ\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
